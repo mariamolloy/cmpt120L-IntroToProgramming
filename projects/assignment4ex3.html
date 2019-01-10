@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+	<head>
+		<title> Math Quiz </title>
+	</head>
+	
+	<body>
+	<script>
+		var numCorrect = 0;
+		for(numCorrect = 0; numCorrect < 5; numCorrect++) {
+			var operand1 = Math.floor(Math.random()*10);
+			var operand2 = Math.floor(Math.random()*10);
+			var correctAnswer = operand1 + operand2;
+			var isCorrect = false;
+			while (isCorrect === false) {
+				var question1 = parseInt(prompt("What is " + operand1 + " + " + operand2 + "?"));
+				if  (question1 === correctAnswer) {
+					alert("Correct!");
+ 					isCorrect = true;
+				}	
+				else {
+					alert("Sorry! Guess again");
+				} 	
+			}
+		}		
+	
+	</script>
+	
+	</body>
+	
+	

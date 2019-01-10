@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<body>
+
+<p id="names">Names</p>
+<p id="monthly_charge">Monthly Charge</p>
+<p id="past_due_amt">Past Due Amount</p>
+<p id="day_past">Days Past Due</p>
+
+<button onclick="names()">Sort by Names in alphabetical order</button>
+<button onclick="monthlyCharge()">Sort by Monthly Charge in ascending order</button>
+<button onclick="pastDueAmount()">Sort by Past Due Amount in ascending order</button>
+<button onclick="days()">Sort by Days Past Due in ascending order</button>
+
+
+
+<script>
+var custName = new Array("Smith, Al","Toms, Andy","Jones, Zack","Vargas, Eddie","Donner, Alice","McMullen, Jessie","Nevins, Carol","Stark, Howard","Neeland, Franny","Boxby, Amos");
+document.getElementById("names").innerHTML = custName;
+var mnthCharge = new Array(140.00, 42.00, 18.00, 18.00, 36.00, 140.00, 42.00, 24.00, 140.00, 24.00);
+document.getElementById("monthly_charge").innerHTML = mnthCharge;
+var pastDueAmt = new Array(0, 0, 84.00, 36.00, 0, 18.00, 42.00, 42.00, 96.00, 0);
+document.getElementById("past_due_amt").innerHTML = pastDueAmt;
+var dayPastDue = new Array(0, 0, 60, 60, 0, 30, 90, 30, 120, 0);
+document.getElementById("day_past").innerHTML = dayPastDue;
+
+
+function names() {
+	var swap = 1;
+	while (swap != 0){
+		swap = 0;
+		for (i = 0; i < custName.length; i++){
+			if (custName[i] > custName[i + 1]){
+				swap = 1;
+				var temp = custName[i];
+				custName[i]=custName[i+1];
+				custName[i+1]=temp;
+				
+				temp = mnthCharge[i];
+				mnthCharge[i]=mnthCharge[i+1];
+				mnthCharge[i+1]=temp;
+				
+				temp = pastDueAmt[i];
+				pastDueAmt[i]=pastDueAmt[i+1];
+				pastDueAmt[i+1]=temp;
+				
+				temp = dayPastDue[i];
+				dayPastDue[i]=dayPastDue[i+1];
+				dayPastDue[i+1]=temp;
+
+			}
+		}
+	}
+document.getElementById("names").innerHTML = custName;
+document.getElementById("monthly_charge").innerHTML = mnthCharge;
+document.getElementById("past_due_amt").innerHTML = pastDueAmt;
+document.getElementById("day_past").innerHTML = dayPastDue;
+ 
+}
+
+function monthlyCharge() {
+	var swap = 1;
+	while (swap != 0){
+		swap = 0;
+		for (i = 0; i < mnthCharge.length; i++){
+			if (mnthCharge[i] > mnthCharge[i + 1]){
+				swap = 1;
+				var temp = mnthCharge[i];
+				mnthCharge[i]=mnthCharge[i+1];
+				mnthCharge[i+1]=temp;
+				
+				temp = custName[i];
+				custName[i]=custName[i+1];
+				custName[i+1]=temp;
+				
+				temp = pastDueAmt[i];
+				pastDueAmt[i]=pastDueAmt[i+1];
+				pastDueAmt[i+1]=temp;
+				
+				temp = dayPastDue[i];
+				dayPastDue[i]=dayPastDue[i+1];
+				dayPastDue[i+1]=temp;
+
+			}
+		}
+	}
+document.getElementById("names").innerHTML = custName;
+document.getElementById("monthly_charge").innerHTML = mnthCharge;
+document.getElementById("past_due_amt").innerHTML = pastDueAmt;
+document.getElementById("day_past").innerHTML = dayPastDue;
+ 
+}
+
+function pastDueAmount() {
+	var swap = 1;
+	while (swap != 0){
+		swap = 0;
+		for (i = 0; i < pastDueAmt.length; i++){
+			if (pastDueAmt[i] > pastDueAmt[i + 1]){
+				swap = 1;
+				var temp = pastDueAmt[i];
+				pastDueAmt[i]=pastDueAmt[i+1];
+				pastDueAmt[i+1]=temp;
+				
+				temp = custName[i];
+				custName[i]=custName[i+1];
+				custName[i+1]=temp;
+				
+				temp = mnthCharge[i];
+				mnthCharge[i]=mnthCharge[i+1];
+				mnthCharge[i+1]=temp;
+				
+				temp = dayPastDue[i];
+				dayPastDue[i]=dayPastDue[i+1];
+				dayPastDue[i+1]=temp;
+
+			}
+		}
+	}
+document.getElementById("names").innerHTML = custName;
+document.getElementById("monthly_charge").innerHTML = mnthCharge;
+document.getElementById("past_due_amt").innerHTML = pastDueAmt;
+document.getElementById("day_past").innerHTML = dayPastDue;
+ 
+}
+
+function days() {
+	var swap = 1;
+	while (swap != 0){
+		swap = 0;
+		for (i = 0; i < dayPastDue.length; i++){
+			if (dayPastDue[i] > dayPastDue[i + 1]){
+				swap = 1;
+				var temp = dayPastDue[i];
+				dayPastDue[i]=dayPastDue[i+1];
+				dayPastDue[i+1]=temp;
+				
+				temp = custName[i];
+				custName[i]=custName[i+1];
+				custName[i+1]=temp;
+				
+				temp = mnthCharge[i];
+				mnthCharge[i]=mnthCharge[i+1];
+				mnthCharge[i+1]=temp;
+				
+				temp = pastDueAmt[i];
+				pastDueAmt[i]=pastDueAmt[i+1];
+				pastDueAmt[i+1]=temp;
+
+			}
+		}
+	}
+document.getElementById("names").innerHTML = custName;
+document.getElementById("monthly_charge").innerHTML = mnthCharge;
+document.getElementById("past_due_amt").innerHTML = pastDueAmt;
+document.getElementById("day_past").innerHTML = dayPastDue;
+ 
+}
+
+</script>
+</body>
+</html>

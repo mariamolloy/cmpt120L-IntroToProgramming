@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+
+<title>Birthday Party RSVP</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script>
+
+function enterNumber(num){
+	var number = document.getElementById(num).value;
+	document.getElementById('my_number').innerHTML = number;
+}
+
+function enterAdd(add){
+	var addy = document.getElementById(add).value;
+	document.getElementById('my_address').innerHTML = addy;
+}
+
+function getMeal(food){
+	var meal = document.getElementById(food).value;
+	document.getElementById('my_dinner').innerHTML = meal;
+	}
+	
+function getDessert(){
+	var count = 0;
+	
+	var desserts = "";
+	for (i = 1; i < 7; i++)
+	{
+		if ((document.getElementById(i).checked == true) && (count == 0))
+		{
+			desserts = document.getElementById(i).value;
+			count++;
+		}
+		else if ((document.getElementById(i).checked == true) && (count < 2))
+		{
+			desserts = desserts + " and " + document.getElementById(i).value;
+			count++;
+		}
+	}
+	document.getElementById('my_desserts').innerHTML = desserts;
+}
+
+function pickTime(atTime){
+    var time = document.getElementById(atTime).value;
+	document.getElementById('my_time').innerHTML = time;
+}
+</script>
+
+<style type="text/css">
+
+<!--
+
+body {
+
+	margin: 5%;
+
+}
+
+-->
+
+</style>
+
+</head>
+
+
+
+<body>
+<form name="Birthday Party RSVP" method = "post" id = "party" action="mailto:maria.molloy1@marist.edu?subject=RSVP" enctype="text/plain" >
+
+<center><h1>Maria's 19th Birthday Party RSVP</h1></center>
+
+<div> <br /><input type = "reset" value = "Reset"><br/></div></fieldset>
+
+<div style="width: 30%; float: left;"><fieldset><legend>Your Information</legend>
+<label>Your phone number:<br /></label> <input type="text" name="phonenumber" id="phonenumber" size = "12" value = ""/>
+<input type ="button" onclick="enterNumber('phonenumber')" value = "ok"></button><br /><br />
+
+<label>Enter your address:<br /></label>
+<textarea name = "address" id = "address" cols = "20“ rows = "5"></textarea> 
+<input type="button" onclick="enterAdd('address')" value="ok"></button>
+
+</fieldset></div>
+
+<div style="width: 20%; float: left;"><fieldset><legend>Meal Choice</legend>
+	<p>What would you like for dinner?</p>
+	<input type = "radio" name = "dinner" id = "Sushi" value = "Sushi" onclick="getMeal('Sushi')">Sushi</br>
+	<input type = "radio" name = "dinner" id = "Pizza" value = "Pizza" onclick="getMeal('Pizza')">Pizza</br>
+	<input type = "radio" name = "dinner" id = "Pasta" value = "Pasta" onclick="getMeal('Pasta')">Pasta</br>
+
+</fieldset></div>
+
+<div style="width: 20%; float: left;"><fieldset><legend>Dessert</legend>
+	<p>Choose two desserts:</p>
+	<input type="checkbox" name="dessert" id="1" value="Birthday Cake" >Birthday Cake<br />
+	<input type="checkbox" name="dessert" id="2" value="Ice Cream" >Ice Cream<br />
+	<input type="checkbox" name="dessert" id="3" value="Cupcakes" >Cupcakes<br />
+	<input type="checkbox" name="dessert" id="4" value="Brownies" >Brownies<br />
+	<input type="checkbox" name="desserts" id="5" value="Cookies" >Cookies<br />
+	<input type="checkbox" name="desserts" id="6" value="Fruit Salad" >Fruit Salad<br />
+	<input type ="button" onclick="getDessert()" value = "Okay" "></button>
+</fieldset></div>
+
+
+<div style="width: 20%; float: left;"><fieldset><legend>Arrival</legend>
+	<p>When will you arrive?</p>
+	<select id="arrivalTimes" name="times" size="3">
+	<option id="7" value="7 pm">7 pm</option>
+    <option id="8" value="8 pm" >8 pm</option>
+    <option id="9" value="9 pm">9 pm</option>
+    <input type ="button" onclick="pickTime('arrivalTimes')" value = "Enter my selection" ></button>
+    </select>
+</fieldset></div>
+
+
+
+<div style="width: 90%; float: left;"><fieldset>
+
+ <h3>Your Responses:<br /><h3>
+
+Your number:&nbsp;<span id= "my_number">&nbsp;</span><br /><br />
+Your address:&nbsp;<span id= "my_address">&nbsp;</span><br /><br />
+Your dinner choice:&nbsp;<span id= "my_dinner">&nbsp;</span><br /><br />
+Your dessert choices:&nbsp;<span id= "my_desserts">&nbsp;</span><br /><br />
+When you will arrive:&nbsp;<span id= "my_time">&nbsp;</span><br />
+
+<input type="submit" value = Submit><br />
+
+
+
+</fieldset></div>
+
+</form>
+
+</body>
+
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<head>
+		<title> Extra Credit 1 </title>
+	</head>
+	
+	<body>
+	<script>
+	var notZero = false;
+	
+	while (notZero == false) {
+	var number = parseInt(prompt("Please choose a number from 1-100"));
+	if (number > 0 && number < 101) {
+	notZero = true;
+	for (i = 1; i <= number; i++) {
+		for (j = 0; j < (number - i); j++) {
+			document.write(" &nbsp; ");
+		}
+		for (k = 0; k < i; k++) {
+			document.write("#");
+		}
+		document.write("<br />");
+	}
+	}
+	else {
+		alert("Please choose a number from 1-100");
+	}
+	}
+
+	
+	</script>
+	</body>

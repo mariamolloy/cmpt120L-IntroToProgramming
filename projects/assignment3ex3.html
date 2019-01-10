@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+	<head>
+		<title> Quiz </title>
+	</head>
+	
+	<body>
+	<script>
+		var score = 0;
+		
+		var question1 = prompt("What is the capital of New York?");
+		if (question1 === "Albany") {
+			document.write("Correct!" + "<br />");
+			score++;
+			}
+		else {
+			document.write("Incorrect :(" + "<br />");
+			}
+		
+		var question2 = prompt("What is 4*4?");
+		if (question2 === "16") {
+			document.write("Correct!" + "<br />");
+			score++;
+			}
+		else {
+			document.write("Incorrect :(" + "<br />");
+			}
+			
+		var question3 = prompt("What the powerhouse of a cell?");
+		if (question3 === "the mitochondria") {
+			document.write("Correct!" + "<br />");
+			score++;
+			}
+		else {
+			document.write("Incorrect :(" + "<br />");
+			}
+		
+		var question4 = prompt("When was The Declaration of Independence signed?");
+		if (question4 === "1776") {
+			document.write("Correct!" + "<br />");
+			score++;
+			}
+		else {
+			document.write("Incorrect :(" + "<br />");
+			}
+		
+		var question5 = prompt("How do you say 'Hello' in French?");
+		if (question5 === "bonjour") {
+			document.write("Correct!" + "<br />");
+			score++;
+			}
+		else {
+			document.write("Incorrect :(" + "<br />");
+			}
+			
+		switch (score)	{
+			case 0:
+				document.write("Better luck next time :(");
+			break;
+			
+			case 1:
+				document.write("Better luck next time :(");
+			break;
+			
+			case 2:
+				document.write("Better luck next time :(");
+			break;
+			
+			case 3:
+				document.write("Not bad! Try again soon.");
+				break;
+				
+			case 4:
+				document.write("Not bad! Try again soon.");
+				break;
+			
+			case 5:
+				document.write("Awesome! You rock!");
+				break;
+				
+		}
+		
+	
+	</script>	
+	</body>

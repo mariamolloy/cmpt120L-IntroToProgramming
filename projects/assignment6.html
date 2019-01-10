@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+	<head>
+		<title> Math Function </title>
+	</head>
+	
+	<body>
+	<script>
+	
+	
+	function operation (operator) {
+		var num1 = parseFloat(document.myForm.number1.value);
+		var num2 = parseFloat(document.myForm.number2.value);
+
+		
+		if (operator === "+") {
+			var answer = num1 + num2;
+			document.myForm.Result.value = answer;
+ 
+		}
+		else if (operator === "-") {
+			var answer = num1 - num2;
+			document.myForm.Result.value = answer;
+		}
+		else if (operator === "*") {
+			var answer = num1 * num2;
+			document.myForm.Result.value = answer;
+		}
+		else if (operator === "/") {
+			var answer = num1 / num2;
+			document.myForm.Result.value = answer;
+		}
+		else {
+			alert("Please choose two numbers and addition, subtraction, multiplication or division!");
+		}
+		
+	}	
+
+	
+	</script>
+	
+	<form name = myForm>
+
+	<input type = "text" size="5" name = "number1">Number 1
+	<input type = "text" size="5" name = "number2">Number 2
+	
+	<input type="button" value = "+" onclick="operation('+');" />
+	<input type="button" value = "-" onclick="operation('-');" />
+	<input type="button" value = "*" onclick="operation('*');" />
+	<input type="button" value = "/" onclick="operation('/');" />
+	<input type="text" size="5" name = "Result"  />&nbsp
+	
+	</form>
+	
+	</body>
+	
